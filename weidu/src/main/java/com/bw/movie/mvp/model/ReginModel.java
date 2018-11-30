@@ -1,0 +1,46 @@
+package com.bw.movie.mvp.model;
+
+import android.app.Application;
+
+import com.bw.movie.bean.RegisterBean;
+import com.bw.movie.mvp.model.api.service.ApiService;
+import com.bw.movie.mvp.contract.ReginContract;
+import com.google.gson.Gson;
+import com.jess.arms.integration.IRepositoryManager;
+import com.jess.arms.mvp.BaseModel;
+
+import com.jess.arms.di.scope.ActivityScope;
+
+import javax.inject.Inject;
+
+import java.util.Map;
+
+import io.reactivex.Observable;
+
+
+@ActivityScope
+public class ReginModel extends BaseModel implements ReginContract.Model {
+    @Inject
+    Gson mGson;
+    @Inject
+    Application mApplication;
+
+    @Inject
+    public ReginModel(IRepositoryManager repositoryManager) {
+        super(repositoryManager);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        this.mGson = null;
+        this.mApplication = null;
+    }
+
+
+    @Override
+    public Observable<RegisterBean> requestregister(Map<String, String> map) {
+        Observable<RegisterBean> registerBeanObservable = mRepositoryManager.obtainRetrofitService(ApiService.class).postResponseRegister(map);
+        return registerBeanObservable;
+    }
+}

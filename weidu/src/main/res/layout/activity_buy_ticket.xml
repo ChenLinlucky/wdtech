@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:background="@drawable/ic_back111"
+            >
+            <LinearLayout
+                android:id="@+id/lin_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                >
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/yingyuan_simp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="#0f0"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/bigname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="青春光线电影院"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/sname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="大家能接受你呢影院"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:src="@drawable/com_icon_navigation_default_xhdpi" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/movieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kdjofij"
+                android:textColor="#fff"
+                android:layout_marginLeft="25dp"
+                android:textSize="25sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_time"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                ></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+        <com.bw.movie.mvp.ui.SeatTable
+            android:id="@+id/SeatTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D1D1D1"
+            ></com.bw.movie.mvp.ui.SeatTable>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="330dp"
+        android:background="@drawable/cocircle"
+        android:text="购票"
+        android:textColor="#fff" />
+
+</RelativeLayout>

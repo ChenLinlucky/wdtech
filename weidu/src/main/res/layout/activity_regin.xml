@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_back"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="欢迎加入我们"
+        android:textColor="#BCBBB1"
+        android:textSize="30sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="昵称"
+        android:layout_margin="20dp"
+        android:textColorHint="#ffffff"
+        android:id="@+id/edit_zhucename"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="手机号"
+        android:layout_margin="20dp"
+        android:textColorHint="#ffffff"
+        android:id="@+id/edit_zhucephone"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="登录密码"
+        android:textColorHint="#ffffff"
+        android:id="@+id/edit_zhucepwd"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="确认密码"
+        android:textColorHint="#ffffff"
+        android:id="@+id/edit_zhcuepwd2"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_zhuceemile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:layout_margin="20dp"
+        android:hint="邮箱地址"
+        android:textColorHint="#ffffff" />
+
+    <EditText
+        android:id="@+id/edit_zhuceriqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:layout_margin="20dp"
+        android:hint="日期xxxx-xx-xx"
+        android:textColorHint="#ffffff" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="性别"
+            android:textColorHint="#ffffff"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_zhuce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/btn_boys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_marginLeft="80dp"
+                android:text="男"
+                />
+
+            <RadioButton
+                android:id="@+id/btn_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:layout_marginLeft="50dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="短信快速注册"
+        android:textColor="#ffffff"
+        android:layout_gravity="right"
+        />
+    <Button
+        android:id="@+id/btn_zhuce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:background="#F88833"
+        android:textSize="25sp"
+        android:textColor="#fff"
+        />
+
+</LinearLayout>

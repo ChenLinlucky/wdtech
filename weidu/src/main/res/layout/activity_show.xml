@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+    </FrameLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/selector_home"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/selector_movie"
+            android:checked="false"
+            android:layout_marginLeft="70dp"
+            />
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/selector_my"
+            android:checked="false"
+            />
+    </RadioGroup>
+</LinearLayout>

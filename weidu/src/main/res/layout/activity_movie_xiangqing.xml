@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/ic_back111">
+
+        <!--影院地址信息-->
+        <LinearLayout
+            android:id="@+id/lin_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/yingyuan_simp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#0f0"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/yingyuan_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:text="青春光线电影院"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/yyname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yingyuan_name"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:text="大家能接受你呢影院" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="right"
+                android:src="@drawable/com_icon_navigation_default_xhdpi" />
+        </LinearLayout>
+        <!--层叠图片-->
+
+            <recycler.coverflow.RecyclerCoverFlow
+                android:id="@+id/yingyuan_recyFlow"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="70dp">
+            </recycler.coverflow.RecyclerCoverFlow>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp">
+        <!--影院排期条目-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/yingyuan_recyView"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:background="#f0f"
+            ></android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/com_ic_back" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="430dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/pingjia_usimp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back333"
+        android:layout_gravity="center_vertical"
+        />
+        <TextView
+            android:id="@+id/pingjia_uname"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="用户名"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_pingjia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评价内容:东西就吃饭的解放军第金佛山折扣id"
+        android:textSize="25sp"
+        android:textColor="#fff"
+        />
+</LinearLayout>
